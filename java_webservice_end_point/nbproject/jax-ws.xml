@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="truck_service">
+      <implementation-class>org.me.service.truck_service</implementation-class>
+    </service>
+    <service name="location_service">
+      <implementation-class>org.me.service.location_service</implementation-class>
+    </service>
+    <service name="payments_service">
+      <implementation-class>org.me.service.payments_service</implementation-class>
+    </service>
+    <service name="comment_service">
+      <implementation-class>org.me.service.comment_service</implementation-class>
+    </service>
+    <service name="transactions_service">
+      <implementation-class>org.me.service.transactions_service</implementation-class>
+    </service>
+    <service name="orders_service">
+      <implementation-class>org.me.service.orders_service</implementation-class>
+    </service>
+    <service name="price_service">
+      <implementation-class>org.me.service.price_service</implementation-class>
+    </service>
+    <service name="employees_service">
+      <implementation-class>org.me.service.employees_service</implementation-class>
+    </service>
+    <service name="expense_service">
+      <implementation-class>org.me.service.expense_service</implementation-class>
+    </service>
+    <service name="invoices_service">
+      <implementation-class>org.me.service.invoices_service</implementation-class>
+    </service>
+    <service name="customers_service">
+      <implementation-class>org.me.service.customers_service</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>
