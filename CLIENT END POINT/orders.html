@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<title>APA LOGISTICS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+  table, th, td {
+  border: 1px solid black;
+  }
+  .jumbotron {
+      background-color: black;
+      margin-top: -10px;
+      height: 200px;
+      color: #fff;
+  }
+  </style>
+
+  <script type="text/javascript">
+
+  function soapRequest()
+  {
+	
+    var str='<?xml version="1.0" encoding="UTF-8"?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">'+
+    '<SOAP-ENV:Header/>'+
+    '<S:Body>'+
+        '<ns2:getOrderID xmlns:ns2="http://service.me.org/"/>'+
+    '</S:Body>'+
+'</S:Envelope>';
+
+
+  function createCORSRequest(method, url){
+    var xhr= new XMLHttpRequest();
+
+    if("withCredentials" in xhr){
+      xhr.open(method, url, false);
+    }
+    else if(typeof XDomainRequest != "undefined"){
+      alert
+      xhr=new XDomainRequest();
+      xhr.open(method, url);
+    }
+    else{
+      console.log("CORS not supported");
+      alert("CORS not Supported");
+      xhr=null;
+    }
+    return xhr; 
+  }
+  var xhr = createCORSRequest("POST", "http://192.168.0.24:8080/SOA_WebService/orders_service?wsdl");
+  if(!xhr){
+    console.log("XHR not supported");
+    return;
+  }
+    xhr.onload = function ()
+    {
+    var result = xhr.responseText;
+    
+
+
+    console.log(result);
+    xmlDoc = $.parseXML(result);
+    $xml = $(xmlDoc);
+    var x;
+    x = xmlDoc.getElementsByTagName("return")[0].childNodes[0];
+    var y;
+    y = xmlDoc.getElementsByTagName("return")[1].childNodes[0];
+    var z;
+    z = xmlDoc.getElementsByTagName("return")[2].childNodes[0];
+    var x1;
+    x1 = xmlDoc.getElementsByTagName("return")[3].childNodes[0];
+
+    console.log(x,y);
+    $price = $xml.find("return");
+    console.log($price[1]);
+
+    $('#myDiv').text(x.nodeValue);
+    $('#myDiv1').text(y.nodeValue);
+    $('#myDiv2').text(z.nodeValue);
+
+    $('#myDiv3').text(x1.nodeValue);
+  
+    console.log($price.text());
+    }
+    xhr.setRequestHeader('Content-Type', 'text/xml');
+    xhr.send(str);
+    response();
+    function response(){
+    	var data="<table><tr><th>Customer ID</th><td><b> <i> <font color='red'> <div1 id='myDiv' > </div1> </b> </i> </font> </td></tr></table>";
+    	document.getElementById('resp').innerHTML=data;
+    }
+}
+</script>
+
+</head>
+
+<body>
+  <input type="button" value="get OrderID" onclick="soapRequest()"/>
+  <input type="button" value="Home" onclick="parent.location.reload()"/>
+<br>
+
+<center>
+  <div id="resp"></div>
+<table>
+  <tr><th></th></tr>
+  <tr><td><b><div1 id='myDiv' ></div1></td></tr></b>
+  <tr><td><b><div2 id='myDiv1'></div2></td></tr></b>
+   <tr><td><b><div2 id='myDiv2'></div2></td></tr></b>
+    <tr><td><b><div2 id='myDiv3'></div2></td></tr></b>
+</table>
+
+</center>
+
+
+</body>
+</html>

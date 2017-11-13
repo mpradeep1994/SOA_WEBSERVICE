@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <title>APA LOGISTICS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+  .jumbotron {
+      background-color: black;
+      margin-top: -10px;
+      height: 200px;
+      color: #fff;
+  }
+  table, th, td {
+  border: 1px solid black;
+}
+  </style>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  function soapRequest(){
+	var PaymentID=document.getElementById("PaymentID").value;
+	var CardholdersName=document.getElementById("CardholdersName").value;
+    var str='<?xml version="1.0" encoding="UTF-8"?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">'+
+    '<SOAP-ENV:Header/>'+
+    '<S:Body>'+
+        '<ns2:getpaymentsDetails xmlns:ns2="http://service.me.org/">'+
+            '<PaymentID>'+PaymentID+'</PaymentID>'+
+            '<CardholdersName>'+CardholdersName+'</CardholdersName>'+
+        '</ns2:getpaymentsDetails>'+
+    '</S:Body>'+
+'</S:Envelope>';
+
+	
+  function createCORSRequest(method, url){
+    var xhr= new XMLHttpRequest();
+	
+    if("withCredentials" in xhr){
+      xhr.open(method, url, true);
+	  xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    }
+    else if(typeof XDomainRequest != "undefined"){
+      alert
+      xhr=new XDomainRequest();
+      xhr.open(method, url);
+    }
+    else{
+      console.log("CORS not supported");
+      alert("CORS not Supported");
+      xhr=null;
+    }
+    return xhr;
+  }
+  var xhr = createCORSRequest("POST","http://192.168.0.24:8080/SOA_WebService/payments_service?wsdl");
+  if(!xhr){
+    console.log("XHR not supported");
+    return;
+  }
+  xhr.onload = function (){
+    var result = xhr.responseText;
+    console.log(result);
+    <!-- JQuery to set the result -->
+    xmlDoc = $.parseXML(result);
+    $xml = $( xmlDoc );
+   
+
+	  $cardholdername = $xml.find("cardholdername");
+    $('#myDiv1').text($cardholdername.text());
+    $check_credit_number = $xml.find("check_credit_number");
+    $('#myDiv2').text($check_credit_number.text());
+    $creditCardAuthorizationNumber = $xml.find("creditCardAuthorizationNumber");
+    $('#myDiv3').text($creditCardAuthorizationNumber.text());
+    $creditCardExpDate = $xml.find("creditCardExpDate");
+    $('#myDiv4').text($creditCardExpDate.text());
+    $creditCardNumber = $xml.find("creditCardNumber");
+    $('#myDiv5').text($creditCardNumber.text());
+    $orderID = $xml.find("orderID");
+    $('#myDiv6').text($orderID.text());
+    $paymentAmount = $xml.find("paymentAmount");
+    $('#myDiv7').text($paymentAmount.text());
+    $paymentDate = $xml.find("paymentDate");
+    $('#myDiv8').text($paymentDate.text());
+    $paymentID = $xml.find("paymentID");
+    $('#myDiv9').text($paymentID.text());
+    $paymentMethodID = $xml.find("paymentMethodID");
+    $('#myDiv10').text($paymentMethodID.text());
+        }
+    xhr.setRequestHeader('Content-Type', 'text/xml');
+    xhr.send(str);
+    response();
+    function response(){
+    	var data = "<table><tr><th>card holder name</th> <td> <b> <i> <font color='red'> <div1 id='myDiv1'></div1></b></i></font></td></tr><tr><th>check credit number</th> <td> <b> <i> <font color='red'> <div2 id='myDiv2'></div2></b></i></font></td></tr><tr><th>credit Card Authorization Number</th> <td> <b> <i> <font color='red'> <div3 id='myDiv3'></div3></b></i></font></td></tr><tr><th>credit Card Exp Date</th> <td> <b> <i> <font color='red'> <div4 id='myDiv4'></div4></b></i></font></td></tr> <tr><th>credit Card Number</th> <td> <b> <i> <font color='red'> <div5 id='myDiv5'></div5></b></i></font></td></tr><tr><th>order ID</th> <td> <b> <i> <font color='red'> <div6 id='myDiv6'></div6></b></i></font></td></tr> <tr><th>payment Amount</th> <td> <b> <i> <font color='red'> <div7 id='myDiv7'></div7></b></i></font></td></tr> <tr><th>payment Date </th> <td> <b> <i> <font color='red'> <div8 id='myDiv8'></div8></b></i></font></td></tr> <tr><th>payment ID</th> <td> <b> <i> <font color='red'> <div9 id='myDiv9'></div9></b></i></font></td></tr> <tr><th>payment Method ID</th> <td> <b> <i> <font color='red'> <div10 id='myDiv10'></div9></b></i></font></td></tr>  </table>";
+    	document.getElementById('resp').innerHTML=data;
+
+    }
+}
+
+  </script>
+</head>
+<body>
+  <b> <font > Payment ID: <input type="text" id="PaymentID"/> </b> </font>
+  <b> <font > Card Holder Name: <input type="text" id="CardholdersName"/> </b> </font> 
+  <input type="button" value="Submit" onclick="soapRequest()"/>
+    <input type="button" value="Home" onclick="parent.location.reload()"/>
+  
+  <br><br>
+  <center>
+   <div id="resp"></div>
+  </center>
+  
+</body>

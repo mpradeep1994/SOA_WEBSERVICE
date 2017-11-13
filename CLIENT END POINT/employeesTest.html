@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<title>APA LOGISTICS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+  .jumbotron {
+      background-color: black;
+      margin-top: -10px;
+      height: 200px;
+      color: #fff;
+  }
+  table, th, td {
+  border: 1px solid black;
+}
+  </style>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  function soapRequest(){
+  var employeeid=document.getElementById("employeeid").value;
+    var str='<?xml version="1.0" encoding="UTF-8"?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">'+
+    '<SOAP-ENV:Header/>'+
+    '<S:Body>'+
+        '<ns2:getemployeedata xmlns:ns2="http://service.me.org/">'+
+            '<employeeid>'+ employeeid+'</employeeid>'+
+        '</ns2:getemployeedata>'+
+    '</S:Body>'+
+'</S:Envelope>';
+
+  
+  function createCORSRequest(method, url){
+    var xhr= new XMLHttpRequest();
+  
+    if("withCredentials" in xhr){
+      xhr.open(method, url, true);
+    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    }
+    else if(typeof XDomainRequest != "undefined"){
+      alert
+      xhr=new XDomainRequest();
+      xhr.open(method, url);
+    }
+    else{
+      console.log("CORS not supported");
+      alert("CORS not Supported");
+      xhr=null;
+    }
+    return xhr;
+  }
+  var xhr = createCORSRequest("POST","http://192.168.0.24:8080/SOA_WebService/employee_service?wsdl");
+  if(!xhr){
+    console.log("XHR not supported");
+    return;
+  }
+  xhr.onload = function (){
+    var result = xhr.responseText;
+    console.log(result);
+    <!-- JQuery to set the result -->
+    xmlDoc = $.parseXML(result);
+    $xml = $( xmlDoc );
+    
+
+  $address = $xml.find("address");
+    $('#myDiv1').text($address.text());
+  $birthdate = $xml.find("birthdate");
+    $('#myDiv2').text($birthdate.text());
+  $cellphone = $xml.find("cellphone");
+    $('#myDiv3').text($cellphone.text());
+    $city = $xml.find("city");
+    $('#myDiv4').text($city.text());
+    $datehired = $xml.find("datehired");
+    $('#myDiv5').text($datehired.text());
+    $dlnumber = $xml.find("dlnumber");
+    $('#myDiv6').text($dlnumber.text());
+    $email = $xml.find("email");
+    $('#myDiv7').text($email.text());
+    $employeeid = $xml.find("employeeid");
+    $('#myDiv8').text($employeeid.text());
+    $extension = $xml.find("extension");
+    $('#myDiv9').text($extension.text());
+    $firstname = $xml.find("firstname");
+    $('#myDiv10').text($firstname.text());
+    $homephone = $xml.find("homephone");
+    $('#myDiv11').text($homephone.text());
+    $job_title = $xml.find("job_title");
+    $('#myDiv12').text($job_title.text());
+    $lastname = $xml.find("lastname");
+    $('#myDiv13').text($lastname.text());
+    $notes = $xml.find("notes");
+    $('#myDiv14').text($notes.text());
+    $postalcode = $xml.find("postalcode");
+    $('#myDiv15').text($postalcode.text());
+    $salary = $xml.find("salary");
+    $('#myDiv16').text($salary.text());
+    $ssn = $xml.find("ssn");
+    $('#myDiv17').text($ssn.text());
+    $state = $xml.find("state");
+    $('#myDiv18').text($state.text());
+
+    }
+    xhr.setRequestHeader('Content-Type', 'text/xml');
+    xhr.send(str);
+    response();
+    function response(){
+      var data = "<table> <tr><th>address </th> <td> <b> <i> <font color='red'> <div1 id='myDiv1'></div1></b></i></font></td></tr> <tr><th>birthdate</th> <td> <b> <i> <font color='red'> <div2 id='myDiv2'></div2></b></i></font></td></tr> <tr><th>cellphone  </th> <td> <b> <i> <font color='red'> <div3 id='myDiv3'></div3></b></i></font></td></tr><tr><th>city  </th> <td> <b> <i> <font color='red'> <div4 id='myDiv4'></div4></b></i></font></td></tr> <tr><th>datehired </th> <td> <b> <i> <font color='red'> <div5 id='myDiv5'></div5></b></i></font></td></tr><tr><th>dlnumber </th> <td> <b> <i> <font color='red'> <div6 id='myDiv6'></div6></b></i></font></td></tr><tr><th>email </th> <td> <b> <i> <font color='red'> <div7 id='myDiv7'></div7></b></i></font></td></tr> <tr><th>employee ID </th> <td> <b> <i> <font color='red'> <div8 id='myDiv8'></div8></b></i></font></td></tr> <tr><th>extension </th> <td> <b> <i> <font color='red'> <div9 id='myDiv9'></div9></b></i></font></td></tr><tr><th>First Name </th> <td> <b> <i> <font color='red'> <div9 id='myDiv10'></div9></b></i></font></td></tr><tr><th>Home Phone </th> <td> <b> <i> <font color='red'> <div9 id='myDiv11'></div9></b></i></font></td></tr><tr><th>job title </th> <td> <b> <i> <font color='red'> <div9 id='myDiv12'></div9></b></i></font></td></tr><tr><th>last name </th> <td> <b> <i> <font color='red'> <div9 id='myDiv13'></div9></b></i></font></td></tr><tr><th>notes </th> <td> <b> <i> <font color='red'> <div1 id='myDiv14'></div1></b></i></font></td></tr><tr><th>postal code</th> <td> <b> <i> <font color='red'> <div2 id='myDiv15'></div2></b></i></font></td></tr><tr><th>salary </th> <td> <b> <i> <font color='red'> <div3 id='myDiv16'></div3></b></i></font></td></tr><tr><th>ssn</th> <td> <b> <i> <font color='red'> <div4 id='myDiv17'></div4></b></i></font></td></tr> <tr><th>state </th> <td> <b> <i> <font color='red'> <div5 id='myDiv18'></div5></b></i></font></td></tr> </table>";
+      document.getElementById('resp').innerHTML=data;
+
+    }
+}
+
+  </script>
+</head>
+<body>
+  <b> <font> Employee ID: <input type="text" id="employeeid"/> </b> </font> 
+  <input type="button" value="Submit" onclick="soapRequest()"/>
+    <input type="button" value="Home" onclick="parent.location.reload()"/>
+
+  <br><br>
+  <center>
+   <div id="resp"></div>
+  </center>
+</body>

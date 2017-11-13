@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <title>APA LOGISTICS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+  .jumbotron {
+      background-color: black;
+      margin-top: -10px;
+      height: 200px;
+      color: #fff;
+  }
+  table, th, td {
+  border: 1px solid black;
+}
+  </style>
+  
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+  
+
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  function soapRequest(){
+	var name=document.getElementById("name").value;
+	var phone=document.getElementById("phone").value;
+    var str='<?xml version="1.0" encoding="UTF-8"?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"'+
+    ' xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">'+
+    ' <SOAP-ENV:Header/>'+
+    ' <S:Body>'+
+        ' <ns2:getCustomerDetails xmlns:ns2="http://service.me.org/"> '+
+            ' <Contact_Name>'+name+'</Contact_Name>'+
+            ' <PhoneNumber>'+phone+'</PhoneNumber>'+
+        ' </ns2:getCustomerDetails>'+
+    ' </S:Body>'+
+' </S:Envelope>';
+	
+  function createCORSRequest(method, url){
+    var xhr= new XMLHttpRequest();
+	
+    if("withCredentials" in xhr){
+      xhr.open(method, url, true);
+	  xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    }
+    else if(typeof XDomainRequest != "undefined"){
+      alert
+      xhr=new XDomainRequest();
+      xhr.open(method, url);
+    }
+    else{
+      console.log("CORS not supported");
+      alert("CORS not Supported");
+      xhr=null;
+    }
+    return xhr;
+  }
+  var xhr = createCORSRequest("POST", "http://localhost:8080/SOA_WebService/customers_service?WSDL");
+  if(!xhr){
+    console.log("XHR not supported");
+    return;
+  }
+  xhr.onload = function (){
+    var result = xhr.responseText;
+    console.log(result);
+    <!-- JQuery to set the result -->
+    xmlDoc = $.parseXML(result);
+    $xml = $( xmlDoc );
+    
+	$businessName = $xml.find("businessName");
+    $('#myDiv1').text($businessName.text());
+  $customerTitle = $xml.find("customerTitle");
+    $('#myDiv2').text($customerTitle.text());
+  $customerid = $xml.find("customerid");
+    $('#myDiv3').text($customerid.text());
+    $phoneNumber = $xml.find("phoneNumber");
+    $('#myDiv4').text($phoneNumber.text());
+
+    }
+    xhr.setRequestHeader('Content-Type', 'text/xml');
+    xhr.send(str);
+    response();
+    function response(){
+    	var data = "<table><tr><th>businessName </th> <td> <b> <i> <font color='red'> <div1 id='myDiv1'></div1></b></i></font></td></tr><tr><th>customer Title </th> <td> <b> <i> <font color='red'> <div1 id='myDiv2'></div1></b></i></font></td></tr><tr><th>Customer id </th> <td> <b> <i> <font color='red'> <div1 id='myDiv3'></div1></b></i></font></td></tr><tr><th>Phone number </th> <td> <b> <i> <font color='red'> <div1 id='myDiv4'></div1></b></i></font></td></tr></table>";
+    	document.getElementById('resp').innerHTML=data;
+
+    }
+}
+  </script>
+</head>
+
+<body>
+  <b>  Customer Name: <input type="text" id="name"/> </b> 
+  <b>  Phone: <input type="text" id="phone"/> </b>  
+  <input type="button" value="Submit" onclick="soapRequest()"/>
+   <input type="button" value="Home" onclick="parent.location.reload()"/>
+  <br><br>
+  <center>
+   <div id="resp"></div>
+  </center>
+</body>

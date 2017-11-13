@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<title>APA LOGISTICS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+  .jumbotron {
+      background-color: black;
+      margin-top: -10px;
+      height: 200px;
+      color: #fff;
+  }
+  table, th, td {
+  border: 1px solid black;
+}
+  </style>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  function soapRequest(){
+	var OrderDate=document.getElementById("OrderDate").value;
+	var OrderTotalAmount=document.getElementById("OrderTotalAmount").value;
+    var str='<?xml version="1.0" encoding="UTF-8"?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">'+
+    '<SOAP-ENV:Header/>'+
+    '<S:Body>'+
+        '<ns2:getordersDetails xmlns:ns2="http://service.me.org/">'+
+            '<OrderDate>'+ OrderDate+'</OrderDate>'+
+            '<OrderTotalAmount>'+ OrderTotalAmount+'</OrderTotalAmount>'+
+        '</ns2:getordersDetails>'+
+    '</S:Body>'+
+'</S:Envelope>';
+
+
+	
+  function createCORSRequest(method, url){
+    var xhr= new XMLHttpRequest();
+	
+    if("withCredentials" in xhr){
+      xhr.open(method, url, true);
+	  xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    }
+    else if(typeof XDomainRequest != "undefined"){
+      alert
+      xhr=new XDomainRequest();
+      xhr.open(method, url);
+    }
+    else{
+      console.log("CORS not supported");
+      alert("CORS not Supported");
+      xhr=null;
+    }
+    return xhr;
+  }
+  var xhr = createCORSRequest("POST","http://192.168.0.24:8080/SOA_WebService/orders_service?wsdl");
+  if(!xhr){
+    console.log("XHR not supported");
+    return;
+  }
+  xhr.onload = function (){
+    var result = xhr.responseText; 
+    console.log(result);
+    xmlDoc = $.parseXML(result);
+    $xml = $(xmlDoc);
+    
+
+    var x1 = xmlDoc.getElementsByTagName("customerID")[0].childNodes[0];
+    var y1 = xmlDoc.getElementsByTagName("employeeID")[0].childNodes[0];
+    var x2 = xmlDoc.getElementsByTagName("isSPecial")[0].childNodes[0];
+    var y2 = xmlDoc.getElementsByTagName("locationID")[0].childNodes[0];
+    var x3 = xmlDoc.getElementsByTagName("orderDate")[0].childNodes[0];
+    var y3 = xmlDoc.getElementsByTagName("orderID")[0].childNodes[0];
+    var x4 = xmlDoc.getElementsByTagName("orderTotalAmount")[0].childNodes[0];
+    
+    var x5 = xmlDoc.getElementsByTagName("transaction1ID")[0].childNodes[0];
+    var y5 = xmlDoc.getElementsByTagName("transaction2ID")[0].childNodes[0];
+    var x6 = xmlDoc.getElementsByTagName("truckID")[0].childNodes[0];
+
+    $('#myDiv2').text(x1.nodeValue);
+    $('#myDiv3').text(y1.nodeValue);
+    $('#myDiv4').text(x2.nodeValue);
+    $('#myDiv5').text(y2.nodeValue);
+    $('#myDiv6').text(x3.nodeValue);
+    $('#myDiv7').text(y3.nodeValue);
+    $('#myDiv8').text(x4.nodeValue);
+
+    $('#myDiv10').text(x5.nodeValue);
+    $('#myDiv11').text(y5.nodeValue);
+    $('#myDiv12').text(x6.nodeValue);   
+  
+
+    }
+    xhr.setRequestHeader('Content-Type', 'text/xml');
+    xhr.send(str);
+    response();
+    function response(){
+    	var data = "<table> </tr><tr><th>customer ID </th> <td> <b> <i> <font color='red'> <div3 id='myDiv2'></div3></b></i></font></td></tr><tr><th>employee ID </th> <td> <b> <i> <font color='red'> <div4 id='myDiv3'></div4></b></i></font></td></tr> <tr><th>isSPecial </th> <td> <b> <i> <font color='red'> <div5 id='myDiv4'></div5></b></i></font></td></tr><tr><th>locationID </th> <td> <b> <i> <font color='red'> <div6 id='myDiv5'></div6></b></i></font></td></tr><tr><th>order Date </th> <td> <b> <i> <font color='red'> <div7 id='myDiv6'></div7></b></i></font></td></tr> <tr><th>order ID </th> <td> <b> <i> <font color='red'> <div8 id='myDiv7'></div8></b></i></font></td></tr> <tr><th>order Total Amount </th> <td> <b> <i> <font color='red'> <div9 id='myDiv8'></div9></b></i></font></td></tr><tr><th>transaction 1 ID </th> <td> <b> <i> <font color='red'> <div9 id='myDiv10'></div9></b></i></font></td></tr><tr><th>transaction 2 ID </th> <td> <b> <i> <font color='red'> <div9 id='myDiv11'></div9></b></i></font></td></tr><tr><th>truck ID </th> <td> <b> <i> <font color='red'> <div9 id='myDiv12'></div9></b></i></font></td></tr> </table>";
+    	document.getElementById('resp').innerHTML=data;
+
+    }
+}
+
+  </script>
+</head>
+<body>
+  <b> <font > Date: <input type="text" id="OrderDate"/> </b> </font>
+  <b> <font > Total Amount: <input type="text" id="OrderTotalAmount"/> </b> </font> 
+  <input type="button" value="Submit" onclick="soapRequest()"/>
+   <input type="button" value="Home" onclick="parent.location.reload()"/>
+
+  
+  <br><br>
+  <center>
+   <div id="resp"></div>
+  </center>
+  
+</body>
