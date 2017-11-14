@@ -48,7 +48,7 @@
     }
     return xhr; 
   }
-  var xhr = createCORSRequest("POST","http://localhost:8080/SOA_WebService/payments_service?wsdl");
+  var xhr = createCORSRequest("POST","http://192.168.0.24:8080/SOA_WebService/payments_service?wsdl");
   if(!xhr){
     console.log("XHR not supported");
     return;
@@ -90,12 +90,12 @@
 </head>
 
 <body>
-  <input type="button" value="get PriceID" onclick="soapRequest()"/>
+  <input type="button" value="get PaymentID" onclick="soapRequest()"/>
   <input type="button" value="Home" onclick="parent.location.reload()"/>
 <br>
 <center>
 <table>
-  <tr><th> Customer ID </th></tr>
+  <tr><th> Payment ID </th></tr>
   <tr><td><b><div1 id='myDiv' ></div1></td></tr></b>
   <tr><td><b><div2 id='myDiv1'></div2></td></tr></b>
   <tr><td><b><div2 id='myDiv2'></div2></td></tr></b>
