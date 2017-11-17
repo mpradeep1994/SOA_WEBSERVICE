@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+ <title>APA LOGISTICS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+  .jumbotron {
+      background-color: black;
+      margin-top: -10px;
+      height: 200px;
+      color: #fff;
+  }
+  table, th, td {
+  border: 1px solid black;
+}
+  </style>
+  
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ 
+ <script type="text/javascript">
+  function soapRequest(){
+	
+    var str='<?xml version="1.0" encoding="UTF-8"?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">'+
+    ' <SOAP-ENV:Header/>'+
+    ' <S:Body>'+
+       ' <ns2:getTrucks xmlns:ns2="http://service.me.org/"/>'+
+    ' </S:Body>'+
+' </S:Envelope>';
+
+	
+  function createCORSRequest(method, url){
+    var xhr= new XMLHttpRequest();
+	
+    if("withCredentials" in xhr){
+      xhr.open(method, url, true);
+	  xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    }
+    else if(typeof XDomainRequest != "undefined"){
+      alert
+      xhr=new XDomainRequest();
+      xhr.open(method, url);
+    }
+    else{
+      console.log("CORS not supported");
+      alert("CORS not Supported");
+      xhr=null;
+    }
+    return xhr;
+  }
+  var xhr = createCORSRequest("POST","http://192.168.0.24:8080/SOA_WebService/truck_service?wsdl");
+  if(!xhr){
+    console.log("XHR not supported");
+    return;
+  }
+  xhr.onload = function (){
+    var result = xhr.responseText;
+    console.log(result);
+   
+    xmlDoc = $.parseXML(result);
+    $xml = $( xmlDoc );
+    
+	$(document).ready(function(){
+	$('body').append("<table><tr>");
+    $(xmlDoc)
+        .find('return')
+        .each(function(){
+        	
+       		var y = $(this).find('make').text();
+        	$('body').append("<tr><td>"+y+"</td>"); 
+        	var x = $(this).find('color').text();
+        	$('body').append("<td>"+x+"</td>");  
+        	var z = $(this).find('licensePlateNo').text();
+        	$('body').append("<td>"+z+"</td>");
+        		var f = $(this).find('model').text();
+        	$('body').append("<td>"+f+"</td>"); 
+        		var t = $(this).find('truckId').text();
+        	$('body').append("<td>"+t+"</td>");
+        		var no = $(this).find('truckNo').text();
+        	$('body').append("<td>"+no+"</td>");
+        		var yr = $(this).find('year').text();
+        	$('body').append("<td>"+yr+"</td>");
+        		var vin = $(this).find('vin').text();
+        	$('body').append("<td>"+vin+"</td><tr></tr>");
+
+        
+        });
+  
+  		
+
+	});
+	
+    }
+    xhr.setRequestHeader('Content-Type', 'text/xml');
+    xhr.send(str);
+    response();
+    function response(){
+    	var data = "";
+    	document.getElementById('resp').innerHTML=data;
+
+    }
+}
+
+  </script>
+</head>
+<body>
+   <input type="button" value="TRUCK DETAILS" onclick="soapRequest()" />
+  <input type="button" value="Home" onclick="parent.location.reload()"/>
+  <br><br>
+
+
+<div id="resp"></div>
+</center>
+  
+</body>
+</html>
