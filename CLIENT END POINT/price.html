@@ -101,7 +101,7 @@
     xhr.send(str);
     response();
     function response(){
-    	var data="<table><tr><th></th><td><b> <i> <font color='red'> <div1 id='myDiv' > </div1> </b> </i> </font> </td></tr></table>";
+    	var data="<center><b> PRICE IDs </b> </center>";
     	document.getElementById('resp').innerHTML=data;
     }
 }
@@ -115,8 +115,8 @@
 <br>
 
 <center>
+  <div id="resp"></div>
 <table>
-  <tr><th> Customer ID </th></tr>
   <tr><td><b><div1 id='myDiv' ></div1></td></tr></b>
   <tr><td><b><div2 id='myDiv1'></div2></td></tr></b>
   <tr><td><b><div2 id='myDiv2'></div2></td></tr></b>
@@ -128,7 +128,7 @@
 
   </table>
 
-<div id="resp"></div>
+
 </center>
 
 </body>
