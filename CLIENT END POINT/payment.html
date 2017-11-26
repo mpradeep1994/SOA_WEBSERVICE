@@ -81,7 +81,7 @@
     xhr.send(str);
     response();
     function response(){
-    	var data="";
+    	var data="<center><b> PAYMENT ID'S </b> </center>";
     	document.getElementById('resp').innerHTML=data;
     }
 }
@@ -94,13 +94,13 @@
   <input type="button" value="Home" onclick="parent.location.reload()"/>
 <br>
 <center>
+  <div id="resp"></div>
 <table>
-  <tr><th> Customer ID </th></tr>
   <tr><td><b><div1 id='myDiv' ></div1></td></tr></b>
   <tr><td><b><div2 id='myDiv1'></div2></td></tr></b>
   <tr><td><b><div2 id='myDiv2'></div2></td></tr></b>
 </table>
-
+<center>
 <div id="resp"></div>
 </center>
 

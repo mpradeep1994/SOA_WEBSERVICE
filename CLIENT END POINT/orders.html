@@ -80,7 +80,6 @@
     $('#myDiv').text(x.nodeValue);
     $('#myDiv1').text(y.nodeValue);
     $('#myDiv2').text(z.nodeValue);
-
     $('#myDiv3').text(x1.nodeValue);
   
     console.log($price.text());
@@ -89,7 +88,7 @@
     xhr.send(str);
     response();
     function response(){
-    	var data="<table><tr><th>Customer ID</th><td><b> <i> <font color='red'> <div1 id='myDiv' > </div1> </b> </i> </font> </td></tr></table>";
+    	var data="<center><b> ORDER ID'S </b> </center>";
     	document.getElementById('resp').innerHTML=data;
     }
 }
@@ -105,11 +104,11 @@
 <center>
   <div id="resp"></div>
 <table>
-  <tr><th></th></tr>
-  <tr><td><b><div1 id='myDiv' ></div1></td></tr></b>
-  <tr><td><b><div2 id='myDiv1'></div2></td></tr></b>
-   <tr><td><b><div2 id='myDiv2'></div2></td></tr></b>
-    <tr><td><b><div2 id='myDiv3'></div2></td></tr></b>
+  
+  <tr><td><b><div id='myDiv' ></div></td></tr></b>
+  <tr><td><b><div id='myDiv1'></div></td></tr></b>
+   <tr><td><b><div id='myDiv2'></div></td></tr></b>
+    <tr><td><b><div id='myDiv3'></div></td></tr></b>
 </table>
 
 </center>
