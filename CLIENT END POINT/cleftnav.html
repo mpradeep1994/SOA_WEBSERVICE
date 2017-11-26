@@ -48,6 +48,11 @@ div.tab button.active {
 </head>
 
 <script>
+  function close_window() {
+  if (confirm("Close Window?")) {
+    window.close();
+  }
+}
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -72,6 +77,8 @@ document.getElementById("defaultOpen").click();
   <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">ORDERS</button>
   <button class="tablinks" onclick="openCity(event, 'Paris')">TRANSACTION</button>
   <button class="tablinks" onclick="openCity(event, 'Tokyo')">CUSTOMER / EMPLOYEE</button>
+  <button type="button" onclick="window.top.close();">LOGOUT</button>
+
 </div>
 
 <div id="London" class="tabcontent">

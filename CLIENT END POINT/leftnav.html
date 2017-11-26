@@ -71,9 +71,9 @@ document.getElementById("defaultOpen").click();
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">ORDERS</button>
   <button class="tablinks" onclick="openCity(event, 'Paris')">TRANSACTION</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">CUSTOMER / EMPLOYEE</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">CUSTOMER / EMPLOYEE</button>  
+  <button type="button" onclick="window.top.close();">LOGOUT</button>
 </div>
-
 <div id="London" class="tabcontent">
   <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
   <h3>ORDERS DETAILS</h3>
@@ -100,5 +100,6 @@ document.getElementById("defaultOpen").click();
   <a href="CustomerTest.html" target="rightnav" style="color:#666666"><span style="font-size:1.6em">Customer Details</span></a><br><br>
   <a href="employeesTest.html" target="rightnav" style="color:#666666"><span style="font-size:1.6em">Employee Details</span></a><br><br>
 </div>
+
 </body>
 </html>
