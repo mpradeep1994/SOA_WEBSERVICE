@@ -2,5 +2,7 @@
 
 ## COMPLETE WEB SERVICE DEMO
 
-[![Spark Presentations](https://github.com/mpradeep1994/SOA_WEBSERVICE/Video/Demo.png)](https://github.com/mpradeep1994/SOA_WEBSERVICE/Video/soa_vid.mov)
+_>>Click the pic to download the video<<_
+[![APA Logistics](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/Video/Demo.jpg)](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/Video/soa_vid.mov)
+
 
