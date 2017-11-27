@@ -52,7 +52,7 @@
     }
     return xhr; 
   }
-  var xhr = createCORSRequest("POST", "http://localhost:8080/SOA_WebService/customers_service?WSDL");
+  var xhr = createCORSRequest("POST", "http://192.168.0.24:8080/SOA_WebService/customers_service?wsdl");
   if(!xhr){
     console.log("XHR not supported");
     return;
@@ -81,7 +81,7 @@
     xhr.send(str);
     response();
     function response(){
-    	var data="";
+    	var data= "<center><b> Customer IDs </b></center>";
     	document.getElementById('resp').innerHTML=data;
     }
 }
@@ -93,12 +93,10 @@
   <input type="button" value="Home" onclick="parent.location.reload()"/>
 <br>
 <center>
+  <div id="resp"></div>
 <table>
-  <tr><th> Customer ID </th></tr>
-  <tr><td><b><div1 id='myDiv' ></div1></td></tr></b>
+   <tr><td><b><div1 id='myDiv' ></div1></td></tr></b>
   <tr><td><b><div2 id='myDiv1'></div2></td></tr></b></table>
-
-<div id="resp"></div>
 </center>
 </body>
 </html>
