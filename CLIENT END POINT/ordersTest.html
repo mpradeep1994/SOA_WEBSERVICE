@@ -54,7 +54,7 @@
     }
     return xhr;
   }
-  var xhr = createCORSRequest("POST","http://192.168.0.24:8080/SOA_WebService/orders_service?wsdl");
+  var xhr = createCORSRequest("POST","http://localhost:8080/SOA_WebService/orders_service?wsdl");
   if(!xhr){
     console.log("XHR not supported");
     return;

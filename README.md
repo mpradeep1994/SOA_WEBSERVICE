@@ -1,8 +1,23 @@
-# SOA_WEBSERVICE
+# SERVICE ORIENTED ARCHITECTURE - WEBSERVICE
 
+```
+Building webservice from scratch to build a logistic tracking system. Implemented XML parsers both in DOM and SAX parsers to move the data from XML to Mysql from which the data is sent out as a soap services to the client application which is built using HTML, CSS, Javascript and BootStrap. 
+```
+
+## Group 1 - TEAM DETAILS
+	PRADEEP RAJA MOHAN - A20370429 
+	ASWIN -
+	ANEESH PARTHA -  
+	
+## IMPLEMENTATION - SERVER SIDE - SOAP SERVICES
+
+### JAVA PERSISTANCE - USING HIBERNATE:
+
+### PROECT EXPLORER - WITH HIBERNATE FILES
+![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/images/1.png "PROECT EXPLORER ") 
 ## COMPLETE WEB SERVICE DEMO
 
-_>>Click the pic to download the video<<_
+Click the pic to download the video
 [![APA Logistics](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/Video/Demo.jpg)](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/Video/soa_vid.mov)
 
 
