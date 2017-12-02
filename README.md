@@ -15,10 +15,10 @@
 	
 ## COMPLETE WEB SERVICE DEMO -Click the Image to watch the demo video
 
-[CLICK VIDEO LINK TO WATCH DEMO - WEBSERVICE](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
+[Click the below Image to watch the DEMO - APA Logistics WebServices](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
 [![IMAGE ALT TEXT HERE](https://user-images.githubusercontent.com/17997235/33510385-42502214-d6d1-11e7-89e0-6cdecdc92db0.png)](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
 
-## Database & Table Creation 
+## DATABASES AND TABLE CREATIONS IN MYSQL. 
 
 ```
 Databases and Tables can be created by using any one of the below execution Method.
@@ -68,14 +68,14 @@ Databases and Tables can be created by using any one of the below execution Meth
 
 ![9](https://user-images.githubusercontent.com/17997235/33510384-4240acf8-d6d1-11e7-8978-7675763691dd.png)
 
-### TWO TYPES OF LOGIN
+## TWO TYPES OF LOGIN
 
 #### 1.CUSTOMER LOGIN
 #### 2.EMPLOYEE LOGIN
 
-# CUSTOMER WEB SERVICES
+### CUSTOMER WEB SERVICES
 
-### CUSTOMER LOGIN
+#### CUSTOMER LOGIN
  
 Please login with the below credentials.
 
@@ -87,35 +87,35 @@ Please login with the below credentials.
 
 ![10](https://user-images.githubusercontent.com/17997235/33510385-42502214-d6d1-11e7-89e0-6cdecdc92db0.png)
 
-### USERS WHICH ARE NOT AVAILABLE IN THE DATABASE WILL NOT BE ALLOWED TO LOGIN
+#### USERS WHICH ARE NOT AVAILABLE IN THE DATABASE WILL NOT BE ALLOWED TO LOGIN
 
 ![11](https://user-images.githubusercontent.com/17997235/33510386-4263b46e-d6d1-11e7-80d8-1c0be2e5b6ff.png)
-### * GET AVAILABLE PRICE IDs
-### * GET ORDER DETAILS BASED ON DATE OF ORDER AND AMOUNT
+#### * GET AVAILABLE PRICE IDs
+#### * GET ORDER DETAILS BASED ON DATE OF ORDER AND AMOUNT
 
 
 ### CUSTOMER INTERACTION PAGE
 
 ![12](https://user-images.githubusercontent.com/17997235/33510387-4270d658-d6d1-11e7-9bb6-57e60b794c59.png)
 
-## ORDERS WEB SERVICE
-### * GET ALL PRICE IDS AVAILABLE
-### * GET ORDER DETAILS BASED ON DATE OF ORDER AND AMOUNT
+### ORDERS WEB SERVICE
+#### * GET ALL PRICE IDS AVAILABLE
+#### * GET ORDER DETAILS BASED ON DATE OF ORDER AND AMOUNT
 
 
 ![13](https://user-images.githubusercontent.com/17997235/33510388-4280b866-d6d1-11e7-9f62-b0a539772a25.png)
 
-### PRICES IDs AVAILABLE IN DATABASE
+#### PRICES IDs AVAILABLE IN DATABASE
 
 ![14](https://user-images.githubusercontent.com/17997235/33510389-428f4962-d6d1-11e7-97b6-43fe3be13982.png)
 
-### ORDER ON DATE 10-02-2016 AND AMOUNT 6500
+#### ORDER ON DATE 10-02-2016 AND AMOUNT 6500
 
 ![15](https://user-images.githubusercontent.com/17997235/33510390-429ce950-d6d1-11e7-8fa8-faf912d80759.png)
 
-## TRANSACTION WEB SERVICE
-### * GET ALL PAYMENT IDs
-### * GET PAYMENT DETAILS BASED ON PAYMENT ID AND CARD HOLDER NAME
+### TRANSACTION WEB SERVICE
+#### * GET ALL PAYMENT IDs
+#### * GET PAYMENT DETAILS BASED ON PAYMENT ID AND CARD HOLDER NAME
 
 
 ### GET ALL PAYMENT IDs
@@ -220,3 +220,15 @@ Please login with the below credentials.
 ### GET EMPLOYEE DETAILS FOR EMPLOYEE ID - 1
 
 ![32](https://user-images.githubusercontent.com/17997235/33510407-43a761a4-d6d1-11e7-9a97-7865fe02a301.png)
+
+__This Continues..__
+
+## LOGOUT
+
+This Logout returns to the Login Page of the Application.
+
+![12](https://user-images.githubusercontent.com/17997235/33510387-4270d658-d6d1-11e7-9bb6-57e60b794c59.png)
+
+
+Thank You !
+- APA Team.
