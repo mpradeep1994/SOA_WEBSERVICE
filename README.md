@@ -48,13 +48,34 @@
 
 ![9](https://user-images.githubusercontent.com/17997235/33510384-4240acf8-d6d1-11e7-8978-7675763691dd.png)
 
+### TWO TYPES OF LOGIN
+### 1.CUSTOMER LOGIN
+### 2.EMPLOYEE LOGIN
+
+### CUSTOMER LOGIN
+
 ![10](https://user-images.githubusercontent.com/17997235/33510385-42502214-d6d1-11e7-89e0-6cdecdc92db0.png)
 
+### USERS WHICH ARE NOT AVAILABLE IN THE DATABASE WILL NOT BE ALLOWED TO LOGIN
+
 ![11](https://user-images.githubusercontent.com/17997235/33510386-4263b46e-d6d1-11e7-80d8-1c0be2e5b6ff.png)
+### * GET AVAILABLE PRICE IDs
+### * GET ORDER DETAILS BASED ON DATE OF ORDER AND AMOUNT
+
+
+### CUSTOMER INTERACTION PAGE
 
 ![12](https://user-images.githubusercontent.com/17997235/33510387-4270d658-d6d1-11e7-9bb6-57e60b794c59.png)
 
+## ORDERS WEB SERVICE
+### * GET ALL PRICE IDS AVAILABLE
+### * GET ORDER DETAILS BASED ON DATE OF ORDER AND AMOUNT
+
+### PRICES IDs AVAILABLE IN DATABASE
+
 ![13](https://user-images.githubusercontent.com/17997235/33510388-4280b866-d6d1-11e7-9f62-b0a539772a25.png)
+
+### ORDER ON DATE 10-02-2016 AND AMOUNT 6500
 
 ![14](https://user-images.githubusercontent.com/17997235/33510389-428f4962-d6d1-11e7-97b6-43fe3be13982.png)
 
