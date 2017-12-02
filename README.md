@@ -77,7 +77,13 @@ Databases and Tables can be created by using any one of the below execution Meth
 
 ### CUSTOMER LOGIN
  
- 
+Please login with the below credentials.
+
+```
+•	User name - customer
+•	Password  - customer
+```
+
 
 ![10](https://user-images.githubusercontent.com/17997235/33510385-42502214-d6d1-11e7-89e0-6cdecdc92db0.png)
 
@@ -142,6 +148,13 @@ Databases and Tables can be created by using any one of the below execution Meth
 # WEB SERVICES FOR EMPLOYEE
 
 ### EMPLOYEE LOGIN
+
+Please login with the below credentials.
+
+```
+•	User name - employee
+•	Password  - employee
+```
 
 ![21](https://user-images.githubusercontent.com/17997235/33510396-42f1125a-d6d1-11e7-8a39-7b74db26ccb9.png)
 
