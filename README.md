@@ -18,7 +18,7 @@
 [Click this/below Image to watch the DEMO - APA Logistics WebServices](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
 [![IMAGE ALT TEXT HERE](https://user-images.githubusercontent.com/17997235/33510385-42502214-d6d1-11e7-89e0-6cdecdc92db0.png)](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
 
-[![https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/Video/soa_vid.gif)](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/Video/soa_vid.mov)
+[![Demo](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/Video/soa_vid.gif)](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
 
 
 ## DATABASES AND TABLE CREATIONS IN MYSQL. 
