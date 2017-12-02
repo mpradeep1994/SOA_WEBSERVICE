@@ -116,27 +116,69 @@
 
 ![20](https://user-images.githubusercontent.com/17997235/33510395-42e6a5e0-d6d1-11e7-889e-c5c3bd0cb137.png)
 
+# EMPLOYEE LOGIN
 
 ![21](https://user-images.githubusercontent.com/17997235/33510396-42f1125a-d6d1-11e7-8a39-7b74db26ccb9.png)
 
+### EMPLOYEE INTERACTION PAGE
+
 ![22](https://user-images.githubusercontent.com/17997235/33510397-4306294c-d6d1-11e7-9d99-3200ef75437a.png)
+
+## EMPLOYEES CAN VIEW ADDITIONAL INFORMATION WHEN COMPARED TO CUSTOMERS
+
+## ORDERS WEB SERVICE
+### * GET ALL PRICE IDs
+### * GET PRICE BASED ON FROM AND TO LOCATION
+### * GET ORDER DETAILS BASED ON DATE AND AMOUNT
+
+
+### AVAILABLE PRICE IDs
 
 ![23](https://user-images.githubusercontent.com/17997235/33510398-431482bc-d6d1-11e7-9004-c72b5d09c523.png)
 
+### GET CUSTOMER INFORMATION BASED ON FROM LOCATION - CHICAGO AND TO LOCATION - HOUSTON
+
 ![24](https://user-images.githubusercontent.com/17997235/33510399-43269b6e-d6d1-11e7-95f1-7e2d1f3038ac.png)
+
+### ORDER DETAILS ON DATE - 10-02-2016 AND AMOUNT - 6500
 
 ![25](https://user-images.githubusercontent.com/17997235/33510400-433127d2-d6d1-11e7-9248-4bb6356062a1.png)
 
+## TRANSACTION WEB SERVICES
+### * GET PAYMENT IDs
+### * GET PAYMENT DETAILS BASED ON PAYMENT ID AND CARD HOLDER NAME 
+### * GET TRUCK DETAILS
+### * GET ORDER IDs
+
+
+### GET AVAILABLE PAYMENT IDs
 ![26](https://user-images.githubusercontent.com/17997235/33510401-4345163e-d6d1-11e7-856f-769bb473ac63.png)
+
+### GET PAYMENT DETAILS BASED ON PAYMENT ID - P02 AND CARD HOLDER NAME - DINESH
 
 ![27](https://user-images.githubusercontent.com/17997235/33510402-4351b182-d6d1-11e7-9261-1cb318ab6ade.png)
 
+### GET ALL TRUCK DETAILS
+
 ![28](https://user-images.githubusercontent.com/17997235/33510403-436527e4-d6d1-11e7-98ae-763ec8156454.png)
+
+### GET ALL ORDER IDs
 
 ![29](https://user-images.githubusercontent.com/17997235/33510404-437784d4-d6d1-11e7-8fb2-5e61ce3c64c9.png)
 
+## EMPLOYEE WEB SERVICES
+### * GET CUSTOMER IDs
+### * GET CUSTOMER DETAILS BASED ON CUSTOMER NAME AND PHONE NUMBER
+### * GET EMPLOYEE DETAILS BASED ON EMPLOYEE ID
+
+### GET CUSTOMER  IDs
+
 ![30](https://user-images.githubusercontent.com/17997235/33510405-4385b8e2-d6d1-11e7-95e1-104b860aa2b9.png)
 
+### GET CUSTOMER  DETAILS BASED ON CUSTOMER NAME - BADRI AND PHONE NUMBER - 6466429615
+
 ![31](https://user-images.githubusercontent.com/17997235/33510406-43970ea8-d6d1-11e7-8f4a-e87ad91da094.png)
+
+### GET EMPLOYEE DETAILS FOR EMPLOYEE ID - 1
 
 ![32](https://user-images.githubusercontent.com/17997235/33510407-43a761a4-d6d1-11e7-9a97-7865fe02a301.png)
