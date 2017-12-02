@@ -12,6 +12,11 @@
 	ASWIN -
 	ANEESH PARTHA - A20376172 
 	
+## COMPLETE WEB SERVICE DEMO
+### Click the Image to watch the video
+
+[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/gRU0Mn5_wwQ/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBQUFH76Nig-tbnc1M3QOfelEdWjw)](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)	
+
 ## IMPLEMENTATION - SERVER SIDE - SOAP SERVICES
 
 ### JAVA PERSISTANCE - USING HIBERNATE:
@@ -40,12 +45,6 @@
 ### DATABASE - TABLE VALUES
 ![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/8.png "Optional title")
 
-Truck.java POJO Class
-## COMPLETE WEB SERVICE DEMO
-
-### Click the Image to watch the video
-
-[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/gRU0Mn5_wwQ/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBQUFH76Nig-tbnc1M3QOfelEdWjw)](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
 
 ![9](https://user-images.githubusercontent.com/17997235/33510384-4240acf8-d6d1-11e7-8978-7675763691dd.png)
 
