@@ -1,7 +1,9 @@
 # SERVICE ORIENTED ARCHITECTURE - WEBSERVICE
 
 ```
-Building webservice from scratch to build a logistic tracking system. Implemented XML parsers both in DOM and SAX parsers to move the data from XML to Mysql from which the data is sent out as a soap services to the client application which is built using HTML, CSS, Javascript and BootStrap. 
+•	Building webservice from scratch to build a logistic tracking system.
+•	Implemented XML parsers both in DOM and SAX parsers to move the data from XML to Mysql.
+•	From MySql the data is sent out as a soap services to the client application which is built using HTML, CSS, 	Javascript and BootStrap. 
 ```
 
 ## Group 1 - TEAM DETAILS
