@@ -13,12 +13,32 @@ Building webservice from scratch to build a logistic tracking system. Implemente
 
 ### JAVA PERSISTANCE - USING HIBERNATE:
 
-### PROECT EXPLORER - WITH HIBERNATE FILES
+### PROECT EXPLORER - WITH HIBERNATE FILES HIGLIGHTED
 ![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/1.png "Optional title")
 
+### HIBERNATE CONFIGURATION IN - hibernate.cfg.xml
+![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/2.png "Optional title")
 
+### HIBERNATE HBM FILE - truck.hbm.xml
+![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/3.png "Optional title")
+
+### POJO CLASS - Truck.java
+![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/4.png "Optional title")
+
+### SOAP SERVICE DECLARATION USING @ATTRIBUTE  - @WebMethod :GetTruck() - For Truck Service 
+![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/5.png "Optional title")
+
+### HIBERNATE- FACTORY - SESSION - TRANSACTION OBJECTS TO RETRIVE DATA FROM TRUCK TABLE
+![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/6.png "Optional title")
+
+### DATA RETRIEVED USING HIBERNATE
+![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/7.png "Optional title")
+
+### DATABASE - TABLE VALUES
+![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/8.png "Optional title")
+
+Truck.java POJO Class
 ## COMPLETE WEB SERVICE DEMO
-
 
 ### Click the Image to watch the video
 
