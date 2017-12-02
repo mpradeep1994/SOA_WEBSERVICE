@@ -8,6 +8,7 @@
 ```
 
 ## Group 1 - TEAM DETAILS
+
 	PRADEEP RAJA MOHAN - A20370429 
 	ASWIN - A20377999
 	ANEESH PARTHA - A20376172 
@@ -32,9 +33,10 @@ Databases and Tables can be created by using any one of the below execution Meth
 
 ```
 
-
 	
 ## IMPLEMENTATION - SERVER SIDE - SOAP SERVICES
+
+	This is on the server side implementation of the web services.
 
 ### JAVA PERSISTANCE - USING HIBERNATE:
 
@@ -67,12 +69,15 @@ Databases and Tables can be created by using any one of the below execution Meth
 ![9](https://user-images.githubusercontent.com/17997235/33510384-4240acf8-d6d1-11e7-8978-7675763691dd.png)
 
 ### TWO TYPES OF LOGIN
-### 1.CUSTOMER LOGIN
-### 2.EMPLOYEE LOGIN
+
+#### 1.CUSTOMER LOGIN
+#### 2.EMPLOYEE LOGIN
 
 # CUSTOMER WEB SERVICES
 
 ### CUSTOMER LOGIN
+ 
+ 
 
 ![10](https://user-images.githubusercontent.com/17997235/33510385-42502214-d6d1-11e7-89e0-6cdecdc92db0.png)
 
