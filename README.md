@@ -47,22 +47,6 @@ Truck.java POJO Class
 
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/gRU0Mn5_wwQ/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBQUFH76Nig-tbnc1M3QOfelEdWjw)](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
 
-![1](https://user-images.githubusercontent.com/17997235/33510376-41bf2656-d6d1-11e7-91c9-138aba4aab22.png)
-
-![2](https://user-images.githubusercontent.com/17997235/33510377-41dc6dba-d6d1-11e7-8e26-233788a39292.png)
-
-![3](https://user-images.githubusercontent.com/17997235/33510378-41e9d4e6-d6d1-11e7-8783-2dacd2138f28.png)
-
-![4](https://user-images.githubusercontent.com/17997235/33510379-41f68a42-d6d1-11e7-9661-873168592d33.png)
-
-![5](https://user-images.githubusercontent.com/17997235/33510380-42037dce-d6d1-11e7-90cc-99e789c9aa87.png)
-
-![6](https://user-images.githubusercontent.com/17997235/33510381-4212e746-d6d1-11e7-9a4a-d254ce22c277.png)
-
-![7](https://user-images.githubusercontent.com/17997235/33510382-4222d5de-d6d1-11e7-85d7-58a2d94513ae.png)
-
-![8](https://user-images.githubusercontent.com/17997235/33510383-42338dc0-d6d1-11e7-849c-19656f690238.png)
-
 ![9](https://user-images.githubusercontent.com/17997235/33510384-4240acf8-d6d1-11e7-8978-7675763691dd.png)
 
 ![10](https://user-images.githubusercontent.com/17997235/33510385-42502214-d6d1-11e7-89e0-6cdecdc92db0.png)
