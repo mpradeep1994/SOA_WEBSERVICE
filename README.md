@@ -42,10 +42,10 @@
 ![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/6.png "Optional title")
 
 ### DATA RETRIEVED USING HIBERNATE
-![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/7.png "Optional title")
+![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/8.png "Optional title")
 
 ### DATABASE - TABLE VALUES
-![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/8.png "Optional title")
+![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/7.png "Optional title")
 
 ### LOGIN PAGE OF APA LOGISTICS
 
