@@ -14,8 +14,11 @@
 	
 ## COMPLETE WEB SERVICE DEMO -Click the Image to watch the demo video
 
-[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/gRU0Mn5_wwQ/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBQUFH76Nig-tbnc1M3QOfelEdWjw =250x250)](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)	
+[CLICK VIDEO LINK TO WATCH DEMO - WEBSERVICE](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
+[![IMAGE ALT TEXT HERE](https://user-images.githubusercontent.com/17997235/33510385-42502214-d6d1-11e7-89e0-6cdecdc92db0.png)](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
 
+
+	
 ## IMPLEMENTATION - SERVER SIDE - SOAP SERVICES
 
 ### JAVA PERSISTANCE - USING HIBERNATE:
@@ -39,10 +42,10 @@
 ![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/6.png "Optional title")
 
 ### DATA RETRIEVED USING HIBERNATE
-![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/7.png "Optional title")
+![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/8.png "Optional title")
 
 ### DATABASE - TABLE VALUES
-![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/8.png "Optional title")
+![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/7.png "Optional title")
 
 ### LOGIN PAGE OF APA LOGISTICS
 
