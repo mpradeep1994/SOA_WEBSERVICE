@@ -11,7 +11,7 @@
   .jumbotron {
       background-color: black;
       margin-top: -10px;
-      height: 200px;
+      height: 210px;
       color: #fff;
   }
   table, th, td {
@@ -35,8 +35,8 @@
     ' <SOAP-ENV:Header/>'+
     ' <S:Body>'+
         ' <ns2:getCustomerDetails xmlns:ns2="http://service.me.org/"> '+
-            ' <Contact_Name>'+name+'</Contact_Name>'+
-            ' <PhoneNumber>'+phone+'</PhoneNumber>'+
+            ' <Contact_Name>'+ name +'</Contact_Name>'+
+            ' <PhoneNumber>'+ phone +'</PhoneNumber>'+
         ' </ns2:getCustomerDetails>'+
     ' </S:Body>'+
 ' </S:Envelope>';
