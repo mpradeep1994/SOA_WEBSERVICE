@@ -85,15 +85,37 @@
 
 ![15](https://user-images.githubusercontent.com/17997235/33510390-429ce950-d6d1-11e7-8fa8-faf912d80759.png)
 
+## TRANSACTION WEB SERVICE
+### * GET ALL PAYMENT IDs
+### * GET PAYMENT DETAILS BASED ON PAYMENT ID AND CARD HOLDER NAME
+
+
+### GET ALL PAYMENT IDs
+
 ![16](https://user-images.githubusercontent.com/17997235/33510391-42a7596c-d6d1-11e7-93e8-d038fb3cb090.png)
+
+### PAYMENT DETAILS FOR PAYMENT ID - P02 AND CARD HOLDER NAME - DINESH
 
 ![17](https://user-images.githubusercontent.com/17997235/33510392-42b37fe4-d6d1-11e7-979e-dedd8e8a8bea.png)
 
+##CUSTOMER WEB SERVICE
+### * GET CUSTOMER IDs
+### * GET CUSTOMER DETAILS BASED ON NAME AND PHONE NUMBER
+
+
+### CUSTOMER IDs 
+
 ![18](https://user-images.githubusercontent.com/17997235/33510393-42c125a4-d6d1-11e7-8358-e6b4a90d10f2.png)
+
+### CUSOTMER DETAILS FOR CUSTOMER NAME - BADRI AND NUMBER - 6466429615
+
 
 ![19](https://user-images.githubusercontent.com/17997235/33510394-42d3bb88-d6d1-11e7-81bb-4337a128b5da.png)
 
+### CUSTOMER CAN LOGOUT ONCE THE CHECKS ARE COMPLETED
+
 ![20](https://user-images.githubusercontent.com/17997235/33510395-42e6a5e0-d6d1-11e7-889e-c5c3bd0cb137.png)
+
 
 ![21](https://user-images.githubusercontent.com/17997235/33510396-42f1125a-d6d1-11e7-8a39-7b74db26ccb9.png)
 
