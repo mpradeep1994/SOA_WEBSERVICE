@@ -17,6 +17,21 @@
 [CLICK VIDEO LINK TO WATCH DEMO - WEBSERVICE](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
 [![IMAGE ALT TEXT HERE](https://user-images.githubusercontent.com/17997235/33510385-42502214-d6d1-11e7-89e0-6cdecdc92db0.png)](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
 
+## Database & Table Creation 
+
+```
+Databases and Tables can be created by using any one of the below execution Method.
+
+>> SQL Script is placed in tbl_structure.sql in folder - "DBTables".
+	• ./tbl_structure.sql
+	• (or) Import the .sql files in MySQL.
+	
+>> Shell script is placed in tbl_structure.sh in folder - "DBTables".
+	• sudo chmod 777 tbl_structure.sh
+	• ./tbl_structure.sh
+
+```
+
 
 	
 ## IMPLEMENTATION - SERVER SIDE - SOAP SERVICES
