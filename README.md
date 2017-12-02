@@ -15,7 +15,7 @@
 	
 ## COMPLETE WEB SERVICE DEMO -Click the Image to watch the demo video
 
-[Click this/below Image to watch the DEMO - APA Logistics WebServices](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
+[Click this LINK/watch below the complete execution - APA Logistics WebServices](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
 
 [![Demo](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/Video/soa_vid.gif)](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)
 
