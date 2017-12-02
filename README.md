@@ -14,7 +14,7 @@ Building webservice from scratch to build a logistic tracking system. Implemente
 ### JAVA PERSISTANCE - USING HIBERNATE:
 
 ### PROECT EXPLORER - WITH HIBERNATE FILES
-![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/images/1.png "Optional title")
+![image](https://github.com/mpradeep1994/SOA_WEBSERVICE/blob/master/images/1.png "Optional title")
 
 
 ## COMPLETE WEB SERVICE DEMO
