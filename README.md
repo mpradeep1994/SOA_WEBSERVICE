@@ -12,10 +12,9 @@
 	ASWIN -
 	ANEESH PARTHA - A20376172 
 	
-## COMPLETE WEB SERVICE DEMO
-### Click the Image to watch the video
+## COMPLETE WEB SERVICE DEMO -Click the Image to watch the demo video
 
-[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/gRU0Mn5_wwQ/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBQUFH76Nig-tbnc1M3QOfelEdWjw)](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)	
+[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/gRU0Mn5_wwQ/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBQUFH76Nig-tbnc1M3QOfelEdWjw =250x250)](http://www.youtube.com/watch?v=gRU0Mn5_wwQ)	
 
 ## IMPLEMENTATION - SERVER SIDE - SOAP SERVICES
 
