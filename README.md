@@ -55,6 +55,8 @@
 ### 1.CUSTOMER LOGIN
 ### 2.EMPLOYEE LOGIN
 
+# CUSTOMER WEB SERVICES
+
 ### CUSTOMER LOGIN
 
 ![10](https://user-images.githubusercontent.com/17997235/33510385-42502214-d6d1-11e7-89e0-6cdecdc92db0.png)
@@ -116,7 +118,10 @@
 
 ![20](https://user-images.githubusercontent.com/17997235/33510395-42e6a5e0-d6d1-11e7-889e-c5c3bd0cb137.png)
 
-# EMPLOYEE LOGIN
+
+# WEB SERVICES FOR EMPLOYEE
+
+### EMPLOYEE LOGIN
 
 ![21](https://user-images.githubusercontent.com/17997235/33510396-42f1125a-d6d1-11e7-8a39-7b74db26ccb9.png)
 
