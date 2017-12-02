@@ -3,7 +3,16 @@
 # MYSQL Connection
 mysql -uaswin -paswin apa_logistics <<EOF
 
+# Create Databases
+
+create database apa_logistics;
+GRANT ALL PRIVILEGES on apa_logistics.* TO aswin@localhost IDENTIFIED BY 'root';
+
 # Create Tables
+
+# Customers
+
+drop table customers;
 
 CREATE TABLE Customers(
 CustomerID NUMERIC(10,2)  NOT NULL,
@@ -30,9 +39,9 @@ CustomerID NUMERIC(10,2)  NOT NULL,
  status varchar(100)    
 )
 
-drop table customers;
+# Locations
 
-
+drop table Locations;
 
 CREATE TABLE Locations (
 locationID varchar(100)  NOT null
@@ -51,7 +60,9 @@ locationID varchar(100)  NOT null
 , locEmail varchar(100)
 );
 
+# Customers
 
+drop table Pricing;
 
 CREATE TABLE Pricing (
 priceID NUMERIC(10,2)  NOT NULL 
@@ -64,6 +75,10 @@ priceID NUMERIC(10,2)  NOT NULL
 , locationNameTo varchar(100)    
 , price varchar(100)     
 );
+
+# Orders
+
+drop table Orders;
 
 
 CREATE TABLE Orders (
@@ -82,7 +97,9 @@ OrderID varchar(100)  NOT NULL
 , comments varchar(100)    
 );
 
-drop table orders;
+# Comments
+
+drop table Comments;
 
 
 CREATE TABLE Comments (
@@ -94,6 +111,10 @@ commentID NUMERIC(10,2)  NOT NULL
 , CommentTime varchar(100)    
 , comments varchar(100)    
 );
+
+# Payments
+
+drop table Payments;
 
 CREATE TABLE Payments (
 PaymentID varchar(100)  NOT null
@@ -107,6 +128,11 @@ PaymentID varchar(100)  NOT null
 , CreditCardExpDate varchar(100)    
 , CreditCardAuthorizationNumber varchar(100)   
 );
+
+# Transactions
+
+drop table Transactions;
+
 
 CREATE TABLE Transactions (
 transactionID varchar(100)  NOT null  
@@ -131,7 +157,9 @@ transactionID varchar(100)  NOT null
 , special varchar(100)    
 );
 
-drop table transactions;
+# Invoices
+
+drop table Invoices;
 
 CREATE TABLE Invoices (
 invoiceID varchar(100)  NOT null  
@@ -149,6 +177,10 @@ invoiceID varchar(100)  NOT null
 , EmailAddress varchar(100)    
 );
 
+# Expenses
+
+drop table Expenses;
+
 CREATE TABLE Expenses (
 ExpenseID NUMERIC(10,2)  NOT null  
 , EmployeeID NUMERIC(10,2)    
@@ -161,6 +193,10 @@ ExpenseID NUMERIC(10,2)  NOT null
 , AdvanceAmount varchar(100)    
 , PaymentMethod varchar(100)    
 );
+
+# Employees
+
+drop table Employees;
 
 CREATE TABLE Employees (
 EmployeeID NUMERIC(10,2)  NOT null  
@@ -183,7 +219,9 @@ EmployeeID NUMERIC(10,2)  NOT null
 , Notes varchar(100)    
 );
 
-drop table employees;
+# Trucks
+
+drop table Trucks;
 
 CREATE TABLE Trucks (
 TruckID NUMERIC(10,2)  NOT null  
@@ -195,9 +233,6 @@ TruckID NUMERIC(10,2)  NOT null
 , LicensePlateNo varchar(100)    
 , VIN varchar(100)    
 )
-
-
-
 
 EOF
 
